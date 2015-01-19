@@ -23,10 +23,10 @@ var stringifyJSON = function(obj) {
     var result = [];
     var keys = Object.keys(obj);
     for (var i=0, length=keys.length; i<length; i++) {
-  	  var value = stringifyJSON(obj[keys[i]]);
+      var value = stringifyJSON(obj[keys[i]]);
       if(value !== null) {
-  		  result.push('"' + keys[i] + '":' + value);
-  	  }
+        result.push('"' + keys[i] + '":' + value);
+      }
     }
     return "{" + result.join(",") + "}";
   }
